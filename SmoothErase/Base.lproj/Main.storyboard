@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="voh-cr-iFS">
+                                <rect key="frame" x="0.0" y="499" width="320" height="69"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="2hZ-Tr-rwD"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XbJ-ta-3AO">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="7X5-5G-mvz">
+                                        <rect key="frame" x="0.0" y="15" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="101" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BGn-K7-pJ3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="B5x-Uj-M8z"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="wEf-Rp-Ugk"/>
+                                </connections>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7uy-36-aXN">
+                                <rect key="frame" x="0.0" y="462" width="320" height="37"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGC-c4-RXd">
+                                        <rect key="frame" x="0.0" y="4" width="106" height="30"/>
+                                        <state key="normal" title="Erase">
+                                            <color key="titleColor" red="0.054901960780000002" green="0.054901960780000002" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnEraseClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iF1-Kg-Se8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgX-11-pGh">
+                                        <rect key="frame" x="106" y="4" width="106" height="30"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" red="0.054901960780000002" green="0.054901960780000002" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnDoneClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ifk-lM-M1q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Njv-1f-p8L">
+                                        <rect key="frame" x="212" y="3" width="106" height="30"/>
+                                        <state key="normal" title="Remove All">
+                                            <color key="titleColor" red="0.054901960780000002" green="0.054901960780000002" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnRemoveAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W6W-uf-Srf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="JGC-c4-RXd" firstAttribute="top" secondItem="7uy-36-aXN" secondAttribute="top" constant="4" id="3gF-bX-LSU"/>
+                                    <constraint firstAttribute="height" constant="37" id="9cl-IQ-6s2"/>
+                                    <constraint firstAttribute="bottom" secondItem="JGC-c4-RXd" secondAttribute="bottom" constant="3" id="Fnf-6l-UkO"/>
+                                    <constraint firstItem="lgX-11-pGh" firstAttribute="height" secondItem="JGC-c4-RXd" secondAttribute="height" id="Gr4-xb-1Te"/>
+                                    <constraint firstItem="Njv-1f-p8L" firstAttribute="width" secondItem="JGC-c4-RXd" secondAttribute="width" id="Jii-Jp-FM0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Njv-1f-p8L" secondAttribute="trailing" constant="2" id="Jxb-M2-L6t"/>
+                                    <constraint firstItem="lgX-11-pGh" firstAttribute="width" secondItem="JGC-c4-RXd" secondAttribute="width" id="KyL-0C-sWO"/>
+                                    <constraint firstAttribute="bottom" secondItem="lgX-11-pGh" secondAttribute="bottom" constant="3" id="NKU-1b-t0Q"/>
+                                    <constraint firstItem="lgX-11-pGh" firstAttribute="leading" secondItem="JGC-c4-RXd" secondAttribute="trailing" id="Oi2-NF-I2g"/>
+                                    <constraint firstItem="Njv-1f-p8L" firstAttribute="top" secondItem="7uy-36-aXN" secondAttribute="top" constant="3" id="Peq-2S-chr"/>
+                                    <constraint firstAttribute="bottom" secondItem="Njv-1f-p8L" secondAttribute="bottom" constant="4" id="Py5-Es-CGr"/>
+                                    <constraint firstItem="Njv-1f-p8L" firstAttribute="height" secondItem="JGC-c4-RXd" secondAttribute="height" id="XoT-hd-8q7"/>
+                                    <constraint firstItem="Njv-1f-p8L" firstAttribute="leading" secondItem="lgX-11-pGh" secondAttribute="trailing" id="lYY-Au-dg4"/>
+                                    <constraint firstItem="JGC-c4-RXd" firstAttribute="leading" secondItem="7uy-36-aXN" secondAttribute="leading" id="ndU-P1-jeW"/>
+                                    <constraint firstItem="lgX-11-pGh" firstAttribute="top" secondItem="7uy-36-aXN" secondAttribute="top" constant="4" id="slF-oO-5A8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7uy-36-aXN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Cqe-aZ-371"/>
+                            <constraint firstAttribute="trailing" secondItem="voh-cr-iFS" secondAttribute="trailing" id="Jfi-Ng-ktG"/>
+                            <constraint firstItem="voh-cr-iFS" firstAttribute="top" secondItem="7uy-36-aXN" secondAttribute="bottom" id="TJl-Qb-0C2"/>
+                            <constraint firstItem="voh-cr-iFS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dOb-Rn-0HO"/>
+                            <constraint firstAttribute="trailing" secondItem="7uy-36-aXN" secondAttribute="trailing" id="pp6-KQ-Nip"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="voh-cr-iFS" secondAttribute="bottom" id="vDx-7t-tcX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colllviewImages" destination="voh-cr-iFS" id="FDa-Vn-hEY"/>
+                        <outlet property="viewEraseOption" destination="7uy-36-aXN" id="VPe-gl-oZt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="285" y="453"/>
+        </scene>
+    </scenes>
+</document>
